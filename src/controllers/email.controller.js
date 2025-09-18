@@ -70,7 +70,7 @@ export async function verificationEmail(req, res, next) {
 
 export async function sendPasswordResetEmail(req, res, next) {
   try {
-    const { to_email, to_name, subject, token } = req.body
+    const { to_email, to_name, subject, token } = req.body;
     const resetLink = `${process.env.BASE_URL}${API_BASE}/auth/reset-password?token=${token}`;
     const mailOptions = {
       from: "Feed Circle",
@@ -121,7 +121,7 @@ export async function sendPasswordResetEmail(req, res, next) {
       data: info.response,
     });
   } catch (error) {
-    next(error)
+    next(error);
   }
 }
 

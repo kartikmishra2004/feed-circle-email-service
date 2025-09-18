@@ -1,6 +1,10 @@
 import { Router } from "express";
-import { sendPasswordResetEmail, sendPasswordResetSuccessEmail, verificationEmail } from "../controllers/email.controller.js";
-import { gatewayAuth } from '../middlewares/gatewayAuth.js'
+import {
+  sendPasswordResetEmail,
+  sendPasswordResetSuccessEmail,
+  verificationEmail,
+} from "../controllers/email.controller.js";
+import { gatewayAuth } from "../middlewares/gatewayAuth.js";
 
 const router = Router();
 
